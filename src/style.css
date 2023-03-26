@@ -98,32 +98,32 @@
 
   .text-d-heading-1 {
     font-size: 5rem;
-    line-height: 4.5rem;
+    line-height: 90%;
     font-weight: 400;
   }
   .text-m-heading-1 {
     font-size: 2rem;
-    line-height: 1.8rem;
+    line-height: 90%;
     font-weight: 400;
   }
   .text-d-heading-2 {
     font-size: 2.813rem;
-    line-height: 2.531rem;
+    line-height: 90%;
     font-weight: 300;
   }
   .text-d-heading-3 {
     font-size: 1.75rem;
-    line-height: 1.575rem;
+    line-height: 90%;
     font-weight: 400;
   }
   .text-d-body-1 {
     font-size: 1.25rem;
-    line-height: 1.125rem;
+    line-height: 90%;
     font-weight: 400;
   }
   .text-d-body-2 {
     font-size: 1rem;
-    line-height: 1.2rem;
+    line-height: 120%;
     font-weight: 400;
   }
   .text-d-minium {
@@ -133,39 +133,39 @@
   }
   .text-d-display-2 {
     font-size: 4rem;
-    line-height: 6rem;
+    line-height: 80%;
     font-weight: 400;
   }
   .text-m-display-2 {
     font-size: 7.5rem;
-    line-height: 3.2rem;
+    line-height: 80%;
     font-weight: 400;
   }
   .text-d-display-1 {
     font-size: 18.75rem;
-    line-height: 15rem;
+    line-height: 80%;
     font-weight: 400;
   }
   .text-m-display-1 {
     font-size: 9.375rem;
-    line-height: 7.5rem;
+    line-height: 80%;
     font-weight: 400;
   }
   .text-d-display-0 {
     font-size: 18.75rem;
-    line-height: 15rem;
+    line-height: 80%;
     font-weight: 400;
   }
   .text-m-display-0 {
     font-size: 4rem;
-    line-height: 3.2rem;
+    line-height: 80%;
     font-weight: 400;
   }
 }
 
 @layer utilities {
   .body-3xl {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   .body-2xl {

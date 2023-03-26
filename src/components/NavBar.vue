@@ -11,7 +11,7 @@
       </div>
       /
       <div class="flex gap-1">
-        <img src="src/assets/UI/phone.svg" alt="" class="w-[22px]" />
+        <img src="/src/assets/UI/phone.svg" alt="" class="w-[22px]" />
         <div class="">Contact</div>
       </div>
     </div>
