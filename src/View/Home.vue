@@ -6,7 +6,7 @@ import KV from "../components/KV.vue";
 
 <template>
   <div >
-    <NavBar class="fixed" />
+    <NavBar class="fixed z-50" />
     <div class="pt-24">
       <KV></KV>
     </div>
