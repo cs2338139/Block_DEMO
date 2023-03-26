@@ -11,9 +11,10 @@ import fakeImage from "../components/fakeImage.vue";
     <div class="absolute top-[40rem] left-[53.625rem] text-display-0 text-custom-Primary-0 z-0">Movie</div>
 
     <div class="absolute top-[43.25rem] left-[6.875rem] w-[29.625rem] text-body-2 text-custom-Secondary-2">Sit elit incididunt Lorem minim ea pariatur anim dolor ut veniam amet ad. Ipsum tempor commodo ullamco Lorem incididunt proidtation ea esse velit tempor culpa.</div>
-    <button class="absolute top-[50rem] left-[13.8125rem] w-[22.125rem] dev-red text-heading-1 text-custom-Secondary-2"><div>View All</div></button>
-
-
+    <button class="absolute top-[50rem] left-[13.8125rem] w-[22.125rem] flex justify-between items-center dev-red text-heading-1 text-custom-Secondary-2">
+      <div class="w-16 h-16 flex justify-center items-center border rounded-full border-custom-Secondary-2"><img class="w-[18px]" src="/src/assets/UI/arrow.svg"></div>
+      <div>View All</div>
+    </button>
   </div>
 </template>
 
