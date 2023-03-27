@@ -4,11 +4,11 @@ import contact from "../../public/Image/Contact.png";
 
 <template>
   <div class="dev-yellow h-[70.875rem] w-full relative">
-    <div class="dev-red ml-16 text-center right-0 left-0 mx-auto text-display-1 text-custom-Secondary-2">Contact</div>
+    <div class="absolute dev-red ml-16 center text-display-1 text-custom-Secondary-2">Contact</div>
 
-    <div class="absolute top-[18.5625rem] text-center right-0 left-0 mx-auto text-heading-2 text-custom-Primary-0">+339 566 789</div>
+    <div class="absolute top-[18.5625rem] text-center center text-heading-2 text-custom-Primary-0">+339 566 789</div>
 
-    <img :src="contact" class="absolute top-[24.5625rem] right-0 left-0 mx-auto w-[82.875rem] h-[27.8125rem]">
+    <img :src="contact" class="absolute top-[24.5625rem] center min-w-[82.875rem] h-[27.8125rem]" />
 
     <div class="absolute top-[52.5rem] left-[-2.375rem] mb-10 text-display-1 text-custom-Secondary-2">ME</div>
     <div class="absolute top-[37.1875rem] right-[-6.25rem] text-display-1 text-custom-Secondary-2">CALL</div>

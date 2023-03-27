@@ -17,7 +17,7 @@ import Footer from "../components/Footer.vue";
       <Story class="mt-32"></Story>
       <Banner class="-mt-24"></Banner>
       <Gallery class="mt-[-2px]"></Gallery>
-      <Contact class="mt-10"></Contact>
+      <Contact class="mt-24"></Contact>
       <Footer class="-mt-14"></Footer>
     </div>
   </div>

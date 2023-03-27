@@ -167,15 +167,20 @@
     line-height: 80%;
     font-weight: 400;
   }
+
+  .center
+  {
+    @apply left-1/2 -translate-x-1/2
+  }
 }
 
 @layer utilities {
   .body-3xl {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .body-2xl {
-    font-size: 20px;
+    font-size: 21.3px;
   }
 
   .body-base {

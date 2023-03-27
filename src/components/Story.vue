@@ -4,7 +4,8 @@ import fakeImage from "../components/fakeImage.vue";
 
 <template>
   <div class="flex flex-col h-[69.0625rem] w-full bg-custom-Primary-1">
-    <div class="w-[129.8125rem] h-[26.0625rem] flex mt-[1px] left-[-20.6875rem] relative justify-between items-center bg-custom-Secondary-0">
+    <!-- <div class="w-[129.8125rem] h-[26.0625rem] flex mt-[1px] left-[-20.6875rem] relative justify-between items-center bg-custom-Secondary-0"> -->
+    <div class="w-[129.8125rem] h-[26.0625rem] flex mt-[1px] center relative justify-between items-center bg-custom-Secondary-0">
       <div class="text-display-0 text-custom-Primary-1">Story</div>
       <div class="text-custom-Primary-1 flex flex-col items-center text-center w-[29.625rem] mt-20">
         <div class="text-heading-2 mb-8">Story</div>
@@ -15,10 +16,9 @@ import fakeImage from "../components/fakeImage.vue";
 
     <div class="flex justify-between w-full h-[37.6875rem] gap-[1px]">
       <div class="bg-custom-GrayScale-0 h-full w-full flex justify-center items-center">
-        <div class="flex flex-col items-start gap-6 w-[40rem]">
+        <div class="flex flex-col items-start gap-6 w-[40rem] dev-yellow">
           <div class="flex justify-center items-center w-full py-[1.75rem] px-[13.75rem]">
-            <img src="/src/assets/UI/hand.svg" alt="" class="w-[9rem] h-[12.5rem]" />
-            <!-- <fakeImage class="w-[9rem] h-[12.5rem]"></fakeImage> -->
+            <img src="/src/assets/UI/hand.svg" alt="" class="" />
           </div>
           <div class="grow w-full flex flex-col gap-4">
             <div class="ml-14 w-full">
@@ -34,8 +34,7 @@ import fakeImage from "../components/fakeImage.vue";
       <div class="bg-custom-GrayScale-0 h-full w-full flex justify-center items-center">
         <div class="flex flex-col-reverse items-start gap-6 w-[40rem]">
           <div class="flex justify-center items-center w-full">
-            <img src="/src/assets/UI/face.svg" alt="" class="[12.5rem] h-[12.5rem]" />
-            <!-- <fakeImage class="w-[12.5rem] h-[12.5rem]"></fakeImage> -->
+            <img src="/src/assets/UI/face.svg" alt="" class="" />
           </div>
           <div class="grow w-full flex flex-col gap-4">
             <div class="ml-12 w-full">
