@@ -3,7 +3,7 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      "3xl": { min: "2559px" },
+      "3xl": { min: "2560px" },
       "2xl": { min: "1919px" },
       // "2xl": { max: "1440px" },
       xl: { max: "1199.98px" },
@@ -137,7 +137,7 @@ module.exports = {
       fontFamily: { Cirka: ["Cirka-Light-300", "Cirka-Regular-400", "Cirka-Bold-700"], "AnticDidone-Regular": ["AnticDidone-Regular"] },
       colors: {
         "custom-Primary-0": "#E01111",
-        "custom-Primary-1": "#288E#E",
+        "custom-Primary-1": "#288E3E",
         "custom-Secondary-0": "#672B11",
         "custom-Secondary-1": "#DBBB76",
         "custom-Secondary-2": "#F3EEE5",

@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+
+</script>
 
 <template>
   <div class="w-full h-24 dev-blue flex justify-between items-center pt-8 pr-20 pl-10">
