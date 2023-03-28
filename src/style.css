@@ -172,6 +172,11 @@
   {
     @apply left-1/2 -translate-x-1/2
   }
+
+  .unCenter
+  {
+  @apply left-0 -translate-x-0
+  }
 }
 
 @layer utilities {
@@ -192,6 +197,6 @@
   }
 
   .body-sm {
-    font-size: 14px;
+    font-size: 16px;
   }
 }

@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="h-[346px] w-full flex flex-col justify-around  bg-custom-Secondary-2 text-display-2 text-custom-Secondary-1">
+  <div class="h-[21.625rem] sm:h-[11.5rem] w-full flex flex-col justify-around  bg-custom-Secondary-2 text-display-2 text-custom-Secondary-1">
     <div class="min-w-fit whitespace-nowrap h-full flex items-center relative">
       <span>PURE</span>
       <span class="mx-10">/</span>

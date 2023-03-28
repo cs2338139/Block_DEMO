@@ -13,9 +13,10 @@ const props = defineProps({
 
 <template>
   <div class="flex flex-col items-start dev-red gap-4">
-    <img class="h-auto w-full" :src="img" alt="" />
-    <div class="text-custom-Primary-1 tex-body-1"> <slot></slot> </div>
-
+    <div class="sm:w-[323px] sm:h-[357px] dev-white overflow-hidden flex justify-center items-center">
+      <img class="h-auto w-full sm:h-auto sm:w-auto max-w-none" :src="img" alt="" />
+    </div>
+    <div class="text-custom-Primary-1 tex-body-1"><slot></slot></div>
   </div>
 </template>
 

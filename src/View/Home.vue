@@ -3,6 +3,7 @@ import { ref, onMounted } from "vue";
 import NavBar from "../components/NavBar.vue";
 import KV from "../components/KV.vue";
 import Story from "../components/Story.vue";
+import Card from "../components/Card.vue";
 import Banner from "../components/Banner.vue";
 import Gallery from "../components/Gallery.vue";
 import Contact from "../components/Contact.vue";
@@ -12,13 +13,14 @@ import Footer from "../components/Footer.vue";
 <template>
   <div>
     <NavBar class="fixed z-50" />
-    <div class="min-h-screen dev-pink pt-32 overflow-hidden">
+    <div class="min-h-screen dev-pink pt-32 sm:pt-20 overflow-hidden">
       <KV></KV>
-      <Story class="mt-32"></Story>
-      <Banner class="-mt-24"></Banner>
+      <Story class="sm:-mb-32 sm:-mt-[4.5625rem] -z-10"></Story>
+      <Card></Card>
+      <Banner class=""></Banner>
       <Gallery class="mt-[-2px]"></Gallery>
-      <Contact class="mt-24"></Contact>
-      <Footer class="-mt-14"></Footer>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   </div>
 </template>
