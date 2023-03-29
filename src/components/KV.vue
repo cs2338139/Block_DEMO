@@ -1,13 +1,16 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import KV1 from "../../public/Image/KV-1.png";
 import KV2 from "../../public/Image/KV-2.png";
 import mKV1 from "../../public/Image/m-KV-1.png";
 import mKV2 from "../../public/Image/m-KV-2.png";
+import gsap from "gsap";
 
 const button = ref();
 const buttonIcon = ref();
 const buttonState = ref(false);
+const buttonRect = ref();
+const movie = ref();
 
 function Click() {
   buttonState.value = !buttonState.value;
@@ -21,6 +24,38 @@ function Click() {
     // button.value.style.opacity = "0.3";
   }
 }
+
+onMounted(() => {
+  gsap.fromTo(
+    movie.value,
+    { x: -200 },
+    {
+      x: 0,
+      scrollTrigger: {
+        trigger: movie.value,
+        start: "top bottom",
+        end: "bottom center",
+        scrub: 1,
+        // markers: true,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    buttonRect.value,
+    { y: 200 },
+    {
+      y: 0,
+      scrollTrigger: {
+        trigger: buttonRect.value,
+        start: "top bottom",
+        end: "bottom center",
+        scrub: true,
+        // markers: true,
+      },
+    }
+  );
+});
 </script>
 
 <template>
@@ -36,9 +71,9 @@ function Click() {
 
     <div class="absolute top-0 left-7 w-[19.5rem] text-display-0 text-custom-Primary-0 z-10 hidden sm:block">1976--Mazda RX7s</div>
 
-    <div class="absolute top-[40rem] sm:top-[27.4rem] -right-28 sm:right-6 text-display-0 text-custom-Primary-0 z-10">Movie</div>
+    <div ref="movie" class="absolute top-[40rem] sm:top-[27.4rem] -right-28 sm:right-6 text-display-0 text-custom-Primary-0 z-10">Movie</div>
 
-    <div class="flex flex-col gap-10 sm:gap-8 top-[43.25rem] sm:top-[32.25rem] left-20 w-[29.625rem] sm:w-[19.5rem] sm:center absolute" >
+    <div ref="buttonRect" class="flex flex-col gap-10 sm:gap-8 top-[43.25rem] sm:top-[32.25rem] left-20 w-[29.625rem] sm:w-[19.5rem] sm:center absolute">
       <div class="text-body-2 text-custom-Secondary-2">Sit elit incididunt Lorem minim ea pariatur anim dolor ut veniam amet ad. Ipsum tempor commodo ullamco Lorem incididunt proidtation ea esse velit tempor culpa.</div>
       <button class="flex gap-6 sm:gap-3 justify-between items-center group self-end sm:self-start transition duration-300" @click="Click()" ref="button">
         <div class="flex items-center justify-center w-16 sm:w-12 h-16 sm:h-12 transition duration-300 border rounded-full border-custom-Secondary-2 bg-custom-GrayScale-0 group-hover:bg-custom-Primary-1" ref="buttonIcon"><img class="w-[1.125rem]" src="/src/assets/UI/arrow.svg" /></div>

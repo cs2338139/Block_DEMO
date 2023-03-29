@@ -5,11 +5,12 @@ import App from "./App.vue";
 import { ApolloClient, createHttpLink, InMemoryCache } from "@apollo/client/core";
 // import { createApolloProvider } from '@vue/apollo-components'
 import { createApolloProvider } from "@vue/apollo-option";
+import { VueWindowSizePlugin } from "vue-window-size/plugin";
 
 // HTTP connection to the API
 const httpLink = createHttpLink({
   // You should use an absolute URL here
-//   uri: "https://chanyuanan.com/graphql",
+  //   uri: "https://chanyuanan.com/graphql",
 });
 
 // Cache implementation
@@ -32,5 +33,6 @@ const apolloProvider = createApolloProvider({
 });
 
 const app = createApp(App);
+app.use(VueWindowSizePlugin);
 app.use(apolloProvider);
 app.mount("#app");

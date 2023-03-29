@@ -6,8 +6,24 @@ import gsap from "gsap";
 const path = ref();
 const hand = ref();
 const isAnimationStart = ref(false);
+const text = ref();
 
-onMounted(() => {});
+onMounted(() => {
+  gsap.fromTo(
+    text.value,
+    { y: 300 },
+    {
+      y: 0,
+      scrollTrigger: {
+        trigger: hand.value,
+        start: "top 700",
+        end: "+=500",
+        scrub: 1,
+        // markers: true,
+      },
+    }
+  );
+});
 
 function Animation() {
   if (isAnimationStart.value) return;
@@ -69,9 +85,11 @@ function Animation() {
         <!-- <img src="/src/assets/UI/hand.svg" alt="" class="w-[9.0031rem] sm:w-[10.25rem]" /> -->
       </div>
       <div class="grow w-full flex flex-col gap-4 dev-pink">
-        <div class="ml-14 w-full dev-yellow sm:ml-0">
-          <div class="text-heading-1 text-custom-Primary-1 mb-2">Cinquième Élément</div>
-          <div class="text-body-2 text-custom-Primary-1">Its plot occurs<a href="https://en.wikipedia.org/wiki/Nonlinear_narrative" target="_blank"> out of chronological order.</a></div>
+        <div class="ml-14 w-full dev-yellow sm:ml-0 overflow-hidden">
+          <div ref="text">
+            <div class="text-heading-1 text-custom-Primary-1 mb-2">Cinquième Élément</div>
+            <div class="text-body-2 text-custom-Primary-1">Its plot occurs<a href="https://en.wikipedia.org/wiki/Nonlinear_narrative" target="_blank"> out of chronological order.</a></div>
+          </div>
         </div>
         <CardButton></CardButton>
       </div>

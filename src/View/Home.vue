@@ -15,7 +15,7 @@ import Footer from "../components/Footer.vue";
     <NavBar class="fixed z-50" />
     <div class="min-h-screen dev-pink pt-32 sm:pt-20 overflow-hidden">
       <KV></KV>
-      <Story class="sm:-mb-32 sm:-mt-[4.5625rem] -z-10"></Story>
+      <Story class=" -z-10"></Story>
       <Card></Card>
       <Banner class=""></Banner>
       <Gallery class="mt-[-2px]"></Gallery>

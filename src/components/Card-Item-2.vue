@@ -5,9 +5,23 @@ import gsap from "gsap";
 
 const face = ref();
 const isAnimationStart = ref(false);
+const text = ref();
 
 onMounted(() => {
-  // Animation();
+  gsap.fromTo(
+    text.value,
+    { y: 300 },
+    {
+      y: 0,
+      scrollTrigger: {
+        trigger: face.value,
+        start: "top bottom",
+        end: "+=500",
+        scrub: 1,
+        // markers: true,
+      },
+    }
+  );
 });
 
 function Animation() {
@@ -16,7 +30,7 @@ function Animation() {
   let tl = gsap.timeline({});
 
   gsap.to(face.value, {
-    scale:1.2,
+    scale: 1.2,
     duration: 0.5,
     ease: "none",
     repeat: -1,
@@ -74,9 +88,11 @@ function Animation() {
         <!-- <img src="/src/assets/UI/face.svg" alt="" class="w-[12.5rem] sm:w-[13.625rem]" /> -->
       </div>
       <div class="grow w-full flex flex-col gap-4 dev-pink">
-        <div class="ml-12 sm:ml-0 w-full">
-          <div class="text-heading-1 text-custom-Primary-1 mb-2">Cinquième Élément</div>
-          <div class="text-body-2 text-custom-Primary-1">Tarantino wrote Pulp Fiction in 1992 and 1993, incorporating scenes that Avary originally wrote for True Romance (1993). Do et reprehenderit exercit reprehendetation excepteur aliqua duis culpa.</div>
+        <div class="ml-12 sm:ml-0 w-full overflow-hidden">
+          <div ref="text">
+            <div class="text-heading-1 text-custom-Primary-1 mb-2">Cinquième Élément</div>
+            <div class="text-body-2 text-custom-Primary-1">Tarantino wrote Pulp Fiction in 1992 and 1993, incorporating scenes that Avary originally wrote for True Romance (1993). Do et reprehenderit exercit reprehendetation excepteur aliqua duis culpa.</div>
+          </div>
         </div>
         <CardButton></CardButton>
       </div>
