@@ -6,7 +6,9 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { EaselPlugin } from "gsap/EaselPlugin";
 import Loading from "./View/Loading.vue";
 import Home from "./View/Home.vue";
+import { register } from 'swiper/element/bundle';
 
+register();
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, EaselPlugin);
 

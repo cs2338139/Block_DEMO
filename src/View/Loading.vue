@@ -6,6 +6,7 @@ const loadingContent = ref();
 const emits = defineEmits(["loadEnd"]);
 
 onMounted(() => {
+  document.body.style.overflow = "hidden";
   gsap.fromTo(
     loadingContent.value,
     { width: "0%" },
@@ -15,6 +16,7 @@ onMounted(() => {
       duration: 2,
       onComplete: () => {
         emits("loadEnd");
+        document.body.style.overflowY = "scroll";
       },
     }
   );
