@@ -1,5 +1,7 @@
 <script setup>
+import { watchEffect, computed } from "vue";
 import gsap from "gsap";
+import { useQuery } from "@vue/apollo-composable";
 import { ref, onMounted } from "vue";
 import GalleryItem from "./Gallery-Item.vue";
 import GallerySwiper from "./Gallery-Swiper.vue";
@@ -8,29 +10,10 @@ import G12 from "../../public/Image/Gallery/G-1-2.png";
 import G21 from "../../public/Image/Gallery/G-2-1.png";
 import G22 from "../../public/Image/Gallery/G-2-2.png";
 import G23 from "../../public/Image/Gallery/G-2-3.png";
-import G31 from "../../public/Image/Gallery/G-3-1.png";
-import G32 from "../../public/Image/Gallery/G-3-2.png";
+// import G31 from "../../public/Image/Gallery/G-3-1.png";
+// import G32 from "../../public/Image/Gallery/G-3-2.png";
 import G41 from "../../public/Image/Gallery/G-4-1.png";
-
-const galleryImgs = ref([G11, G12, G21, G22, G23, G31, G32, G41]);
-// const _galleryImages = ref([]);
-const swiper = ref();
-
-function OpenSwiper() {
-  // _galleryImages.value = [];
-  // for (let i = index; i < galleryImgs.value.length - 1; i++) {
-  //   _galleryImages.value.push(galleryImgs.value[i]);
-  // }
-
-  // for (let i = 0; i < index+1; i++) {
-  //   _galleryImages.value.push(galleryImgs.value[i]);
-  // }
-
-  // console.log(_galleryImages.value);
-
-  swiper.value.$el.style.display = "flex";
-  document.body.style.overflow = "hidden";
-}
+import gql from "graphql-tag";
 
 const L1 = ref();
 const L11 = ref();
@@ -44,6 +27,11 @@ const L31 = ref();
 const L32 = ref();
 const L4 = ref();
 const L41 = ref();
+
+const G31= ref();
+const T31= ref();
+const G32= ref();
+const T32= ref();
 
 onMounted(() => {
   gsap.fromTo(
@@ -160,20 +148,100 @@ onMounted(() => {
   );
 });
 
+const query = gql`
+  query {
+    posts {
+      nodes {
+        literati {
+          enName
+          image {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+`;
 
+// const data = ref([]);
+const { result } = useQuery(query);
+watchEffect(() => {
+  // console.log(result.value);
+  // if (result.value.children.length > 0) {
+  //   console.log("get data from wordpress.");
+  //   data.push(result.value.children[0]);
+  //   data.push(result.value.children[1]);
+  //   console.log(data.value);
+  // }
+  if (result.value != undefined) {
+    const { posts: li } = result.value;
+    // console.log(data.nodes[0].literati.enName);
+    console.log("get data from wordpress.");
+    // data.value.push(li.nodes[0].literati.enName);
+    // data.value.push(li.nodes[0].literati.image.sourceUrl);
+    // data.value.push(li.nodes[1].literati.enName);
+    // data.value.push(li.nodes[1].literati.image.sourceUrl);
+    // console.log(data.value);
+    G31.value=li.nodes[0].literati.image.sourceUrl;
+    T31.value=li.nodes[0].literati.enName;
+    G32.value=li.nodes[1].literati.image.sourceUrl;
+    T32.value=li.nodes[1].literati.enName;
+  }
+});
+
+const galleryImgs = ref([G11, G12, G21, G22, G23, G31, G32, G41]);
+// const _galleryImages = ref([]);
+const swiper = ref();
+
+function OpenSwiper() {
+  // _galleryImages.value = [];
+  // for (let i = index; i < galleryImgs.value.length - 1; i++) {
+  //   _galleryImages.value.push(galleryImgs.value[i]);
+  // }
+
+  // for (let i = 0; i < index+1; i++) {
+  //   _galleryImages.value.push(galleryImgs.value[i]);
+  // }
+
+  // console.log(_galleryImages.value);
+
+  swiper.value.$el.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
 </script>
 
 <!-- <script>
-import gql from 'graphql-tag'
+import gql from "graphql-tag";
 
 export default {
+  data () {
+  return {
+    // 初始化你的 apollo 数据
+    hellos: '',
+  },
+},
   apollo: {
     // Simple query that will update the 'hello' vue property
-    hello: gql`query {
-      hello
-    }`,
+    hellos: gql`
+      query getWriter($limit: Int!) {
+        posts(where: { categoryName: "Literati" }, first: $limit) {
+          nodes {
+            literati {
+              about
+              name
+              enAbout
+              enName
+              writeryear
+              image {
+                sourceUrl
+              }
+            }
+          }
+        }
+      }
+    `,
   },
-}
+};
 </script> -->
 
 <template>
@@ -196,8 +264,8 @@ export default {
       <GalleryItem ref="L23" class="col-start-10 col-end-13 row-start-6 row-end-[15] w-[20.6875rem]" :img="G23">1997 fhristopher fairbank</GalleryItem>
 
       <div ref="L3" class="col-start-4 col-end-4 row-start-[18] mb-5 sm:mt-5 devs-red text-heading-3 place-self-end sm:place-self-start text-custom-Secondary-2">SECTION 03</div>
-      <GalleryItem ref="L31" class="col-start-4 col-end-7 row-start-[19] w-[21.875rem] place-self-end sm:place-self-start" :img="G31">1997 fhristopher fairbank</GalleryItem>
-      <GalleryItem ref="L32" class="col-start-7 col-end-10 row-start-[19] w-[17.625rem] place-self-stretch" :img="G32">1997 fhristopher fairbank</GalleryItem>
+      <GalleryItem ref="L31" class="col-start-4 col-end-7 row-start-[19] w-[21.875rem] place-self-end sm:place-self-start" :img="G31">{{T31}}</GalleryItem>
+      <GalleryItem ref="L32" class="col-start-7 col-end-10 row-start-[19] w-[17.625rem] place-self-stretch" :img="G32">{{T32}}</GalleryItem>
 
       <div ref="L4" class="col-start-4 col-end-4 row-start-[26] mb-5 sm:mt-5 devs-red text-heading-3 text-custom-Secondary-2">SECTION 04</div>
       <GalleryItem ref="L41" class="col-start-4 col-end-13 row-start-[27] w-[63.3125rem]" :img="G41">1997 fhristopher fairbank</GalleryItem>

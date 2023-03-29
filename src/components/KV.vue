@@ -36,12 +36,12 @@ onMounted(() => {
         start: "top bottom",
         end: "bottom center",
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     }
   );
 
-  console.log(movie.value);
+  // console.log(movie.value);
 
   gsap.fromTo(
     buttonRect.value,
