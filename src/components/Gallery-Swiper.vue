@@ -34,14 +34,14 @@ function Close() {
 
 <template>
   <div class="fixed bottom-0 left-0 z-50 w-screen panel bg-black/50 flex justify-center items-center duration-300 transition" ref="main" >
-    <div class="dev-white w-1/5 h-full" @click="Close()"></div>
+    <div class="devs-white w-1/5 h-full" @click="Close()"></div>
     <swiper :effect="'cards'" :modules="modules" class="w-1/3 devs-white sm:w-1/2 h-1/2">
       <!-- <gallery-swiper-items v-for="img in props.imgs" :img="img"></gallery-swiper-items> -->
       <swiper-slide v-for="img in props.imgs">
         <img :src="img" alt="" />
       </swiper-slide>
     </swiper>
-    <div class="dev-white w-1/5 h-full" @click="Close()"></div>
+    <div class="devs-white w-1/5 h-full" @click="Close()"></div>
   </div>
 </template>
 

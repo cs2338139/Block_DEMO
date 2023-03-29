@@ -215,7 +215,7 @@ export default {
       </div>
 
       <div class="relative top-[12.625rem] grid gap-5 auto-cols-max auto-rows-max place-content-end sm:block">
-        <div class="dev-red text-heading-3 place-self-end sm:place-self-start mb-5 text-custom-Secondary-2">SECTION 01</div>
+        <div class="devs-red text-heading-3 place-self-end sm:place-self-start mb-5 text-custom-Secondary-2">SECTION 01</div>
         <GalleryItem class="col-start-1 place-self-end sm:place-self-start w-[41.1875rem]" :img="G11">1997 fhristopher fairbank</GalleryItem>
         <GalleryItem class="col-start-2 place-self-end sm:place-self-start w-[25.125rem]" :img="G12">1997 fhristopher fairbank</GalleryItem>
       </div>

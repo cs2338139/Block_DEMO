@@ -50,8 +50,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="dev-yellow w-full relative flex flex-col items-center">
-    <div class="dev-red ml-16 text-display-1 text-custom-Secondary-2 sm:-ml-10" ref="contact">Contact</div>
+  <div class="devs-yellow w-full relative flex flex-col items-center">
+    <div class="devs-red ml-16 text-display-1 text-custom-Secondary-2 sm:-ml-10" ref="contact">Contact</div>
 
     <div class="text-center text-heading-2 text-custom-Primary-0 devs-red whitespace-nowrap my-14">+339 566 789</div>
 

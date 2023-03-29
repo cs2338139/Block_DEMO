@@ -59,7 +59,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="dev-yellow h-[64.3125rem] sm:h-[45.9375rem] w-full relative bg-custom-GrayScale-0 z-30">
+  <div class="devss-yellow h-[64.3125rem] sm:h-[45.9375rem] w-full relative bg-custom-GrayScale-0 z-30">
     <img :src="KV1" class="absolute top-[8.5rem] center ml-4 min-w-[46.625rem] z-0 sm:hidden" />
     <img :src="mKV1" class="absolute top-[6.8rem] left-0 z-0 hidden sm:block" />
 
