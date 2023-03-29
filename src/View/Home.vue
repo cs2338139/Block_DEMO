@@ -20,7 +20,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <NavBar class="fixed z-50" />
+    <NavBar class="fixed z-40" />
     <div class="min-h-screen devs-pink pt-32 sm:pt-20 overflow-hidden">
       <KV></KV>
       <Story class="-z-10"></Story>
