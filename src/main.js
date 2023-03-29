@@ -9,7 +9,7 @@ import { createApolloProvider } from "@vue/apollo-option";
 // HTTP connection to the API
 const httpLink = createHttpLink({
   // You should use an absolute URL here
-  uri: "https://chanyuanan.com/graphql",
+//   uri: "https://chanyuanan.com/graphql",
 });
 
 // Cache implementation

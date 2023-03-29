@@ -10,7 +10,7 @@ import G32 from "../../public/Image/Gallery/G-3-2.png";
 import G41 from "../../public/Image/Gallery/G-4-1.png";
 </script>
 
-<script>
+<!-- <script>
 import gql from 'graphql-tag'
 
 export default {
@@ -21,7 +21,7 @@ export default {
     }`,
   },
 }
-</script>
+</script> -->
 
 <template>
   <div class="w-full py-24 px-14 sm:px-4">
