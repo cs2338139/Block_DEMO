@@ -8,6 +8,14 @@ import Banner from "../components/Banner.vue";
 import Gallery from "../components/Gallery.vue";
 import Contact from "../components/Contact.vue";
 import Footer from "../components/Footer.vue";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+onMounted(() => {
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 2);
+  console.log('s');
+});
 </script>
 
 <template>
@@ -15,7 +23,7 @@ import Footer from "../components/Footer.vue";
     <NavBar class="fixed z-50" />
     <div class="min-h-screen devs-pink pt-32 sm:pt-20 overflow-hidden">
       <KV></KV>
-      <Story class=" -z-10"></Story>
+      <Story class="-z-10"></Story>
       <Card></Card>
       <Banner class=""></Banner>
       <Gallery class="mt-[-2px]"></Gallery>
