@@ -10,6 +10,19 @@ import G32 from "../../public/Image/Gallery/G-3-2.png";
 import G41 from "../../public/Image/Gallery/G-4-1.png";
 </script>
 
+<script>
+import gql from 'graphql-tag'
+
+export default {
+  apollo: {
+    // Simple query that will update the 'hello' vue property
+    hello: gql`query {
+      hello
+    }`,
+  },
+}
+</script>
+
 <template>
   <div class="w-full py-24 px-14 sm:px-4">
     <div class="h-full w-full grid grid-flow-dense gap-3 sm:flex sm:flex-col">

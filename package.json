@@ -9,9 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.10",
+    "@vue/apollo-components": "^4.0.0-beta.4",
+    "@vue/apollo-option": "^4.0.0-beta.4",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.8.0",
+    "graphql-tag": "^2.12.6",
     "gsap": "^3.11.5",
     "three": "^0.150.1",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-apollo": "^3.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",

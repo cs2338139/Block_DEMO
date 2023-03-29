@@ -16,14 +16,17 @@ onMounted(() => {
   const loader = new OBJLoader();
   loader.load(
     "../../public/models/2023F2E-TEST.obj",
-    function (obj) {
+    function (object) {
       console.log("model is onLoad");
-      const model = obj;
+      // const model = obj;
 
-      model.position.set(0, 5, 0);
-      model.scale.set(100, 100, 100);
-      model.castShadow = true;
-      scene.add(model);
+      object.traverse((child) => {
+        if (child.material) child.material = new THREE.MeshToonMaterial({ color: 0x288E3E } );
+      });
+      object.position.set(0, -10, 0);
+      object.scale.set(150, 150, 150);
+      object.castShadow = true;
+      scene.add(object);
     },
     undefined,
     function (error) {
@@ -50,7 +53,7 @@ onMounted(() => {
   scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 1).texture;
 
   // lightning and casting shadows
-  const light = new THREE.DirectionalLight(0x404040, 1); // soft white light
+  const light = new THREE.DirectionalLight(0x52663c, 0.5); // soft white light
   light.position.set(15, 20, 0);
   light.target.position.set(0, 0, 0);
   light.castShadow = true;
@@ -78,19 +81,19 @@ onMounted(() => {
   const gridHelper = new THREE.GridHelper(200, 50); // add a grid
   // light helper
   const helper = new THREE.DirectionalLightHelper(light, 5);
-  scene.add( gridHelper );
-  scene.add( helper );
+  // scene.add(gridHelper);
+  // scene.add(helper);
 
   const animate = () => {
     requestAnimationFrame(animate);
 
     // cube.rotation.x += 0.01;
 
-    const width = window.innerWidth / 2;
-    const height = window.innerHeight / 2;
-    camera.aspect = window.innerWidth / window.innerHeight;
+    // const width = window.innerWidth / 2;
+    // const height = window.innerHeight / 2;
+    // camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(width, height);
+    renderer.setSize(800, 400);
 
     controls.update();
     renderer.render(scene, camera);
