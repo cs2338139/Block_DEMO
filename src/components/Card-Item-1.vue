@@ -68,7 +68,7 @@ function Animation() {
 
 <template>
   <div class="bg-custom-GrayScale-0 h-full w-full flex justify-center items-center sm:min-w-[18.5rem]" @mouseenter="Animation">
-    <div class="flex flex-col items-start gap-6 dev-red w-[90%] sm:w-[80%]">
+    <div class="flex flex-col items-start gap-6 devs-red w-[90%] sm:w-[80%]">
       <div class="flex justify-center items-center w-full my-10">
         <svg width="156" height="210" viewBox="0 0 156 210" ref="hand" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -84,8 +84,8 @@ function Animation() {
 
         <!-- <img src="/src/assets/UI/hand.svg" alt="" class="w-[9.0031rem] sm:w-[10.25rem]" /> -->
       </div>
-      <div class="grow w-full flex flex-col gap-4 dev-pink">
-        <div class="ml-14 w-full dev-yellow sm:ml-0 overflow-hidden">
+      <div class="grow w-full flex flex-col gap-4 devs-pink">
+        <div class="ml-14 w-full devs-yellow sm:ml-0 overflow-hidden">
           <div ref="text">
             <div class="text-heading-1 text-custom-Primary-1 mb-2">Cinquième Élément</div>
             <div class="text-body-2 text-custom-Primary-1">Its plot occurs<a href="https://en.wikipedia.org/wiki/Nonlinear_narrative" target="_blank"> out of chronological order.</a></div>

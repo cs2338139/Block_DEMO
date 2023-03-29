@@ -67,7 +67,7 @@ function Animation() {
 
 <template>
   <div class="bg-custom-GrayScale-0 h-full w-full flex justify-center items-center sm:min-w-[18.5rem]" @mouseenter="Animation">
-    <div class="flex flex-col-reverse items-start gap-6 dev-red w-[90%] sm:w-[80%]">
+    <div class="flex flex-col-reverse items-start gap-6 devs-red w-[90%] sm:w-[80%]">
       <div class="flex justify-center items-center w-full">
         <!-- <svg class="w-[12.5rem] sm:w-[13.625rem]" ref="face" width="210" height="211" viewBox="0 0 210 211" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M149.445 61.0555V83.2778" stroke="#288E3E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -87,7 +87,7 @@ function Animation() {
 
         <!-- <img src="/src/assets/UI/face.svg" alt="" class="w-[12.5rem] sm:w-[13.625rem]" /> -->
       </div>
-      <div class="grow w-full flex flex-col gap-4 dev-pink">
+      <div class="grow w-full flex flex-col gap-4 devs-pink">
         <div class="ml-12 sm:ml-0 w-full overflow-hidden">
           <div ref="text">
             <div class="text-heading-1 text-custom-Primary-1 mb-2">Cinquième Élément</div>

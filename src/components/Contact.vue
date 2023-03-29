@@ -53,7 +53,7 @@ onMounted(() => {
   <div class="dev-yellow w-full relative flex flex-col items-center">
     <div class="dev-red ml-16 text-display-1 text-custom-Secondary-2 sm:-ml-10" ref="contact">Contact</div>
 
-    <div class="text-center text-heading-2 text-custom-Primary-0 dev-red whitespace-nowrap my-14">+339 566 789</div>
+    <div class="text-center text-heading-2 text-custom-Primary-0 devs-red whitespace-nowrap my-14">+339 566 789</div>
 
     <!-- <div class="backdrop-hue-rotate-90 bg-white/30">
       <img :src="contact" class="min-w-[82.875rem] sm:max-h-[276px] sm:min-w-fit sm:mr-28 mb-10" />
