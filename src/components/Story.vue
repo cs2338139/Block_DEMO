@@ -63,7 +63,7 @@ onMounted(() => {
         scrollTrigger: {
           trigger: main.value,
           start: "center center",
-          end: "+=800",
+          end: "+=400",
           scrub: 1,
           // markers: true,
           // pin: true,

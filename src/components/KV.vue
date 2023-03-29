@@ -45,7 +45,7 @@ onMounted(() => {
 
   gsap.fromTo(
     buttonRect.value,
-    { y: 200 },
+    { y: 100 },
     {
       y: 0,
       scrollTrigger: {
