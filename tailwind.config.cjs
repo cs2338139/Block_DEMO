@@ -3,7 +3,7 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     backgroundImage: {
-      "contactImg": "url('./public/Image/Contact.png')",
+      "contactImg": "url('/src/assets/UI/Contact.png')",
     },
     screens: {
       "3xl": { min: "2560px" },

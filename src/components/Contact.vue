@@ -1,5 +1,5 @@
 <script setup>
-import contact from "../../public/Image/Contact.png";
+// import contact from "../../public/Image/Contact.png";
 import { ref, onMounted } from "vue";
 
 const mouse = ref();

@@ -4,6 +4,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { ref, onMounted } from "vue";
+// import model from "../../public/models/2023F2E-TEST.obj";
 
 const container = ref();
 
@@ -15,7 +16,7 @@ onMounted(() => {
 
   const loader = new OBJLoader();
   loader.load(
-    " ./models/2023F2E-TEST.obj",
+    '../../public/models/2023F2E-TEST.obj',
     function (object) {
       console.log("model is onLoad");
       // const model = obj;
