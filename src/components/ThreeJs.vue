@@ -5,7 +5,7 @@ import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { ref, onMounted } from "vue";
 // import model from "../../public/models/2023F2E-TEST.obj?url";
-const model = new URL('../../public/models/2023F2E-TEST.obj', import.meta.url).href
+const model = new URL('../../models/2023F2E-TEST.obj', import.meta.url).href
 
 const container = ref();
 
