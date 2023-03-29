@@ -247,7 +247,7 @@ export default {
 <template>
   <div class="w-full py-24 px-14 sm:px-4">
     <div class="h-full w-full grid grid-flow-dense gap-3 sm:flex sm:flex-col">
-      <Button class="col-start-1 col-end-13 row-start-3 place-self-center text-display-1 devs-white text-center text-custom-Primary-0 -mt-10 mb-10 dev-white hover:scale-110 duration-300 transition" @click="OpenSwiper">Gallery</Button>
+      <Button class="col-start-1 col-end-13 row-start-3 place-self-center text-display-1 devs-white text-center text-custom-Primary-0 -mt-10 mb-10 hover:scale-110 duration-300 transition" @click="OpenSwiper">Gallery</Button>
 
       <div class="col-start-2 col-end-3 place-self-start text-heading-3 text-custom-Secondary-2 devs-white">
         <div>SUMMER</div>
