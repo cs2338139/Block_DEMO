@@ -247,7 +247,7 @@ export default {
 <template>
   <div class="w-full py-24 px-14 sm:px-4">
     <div class="h-full w-full grid grid-flow-dense gap-3 sm:flex sm:flex-col">
-      <Button class="col-start-1 col-end-13 row-start-3 place-self-center text-display-1 devs-white text-center text-custom-Primary-0 -mt-10 mb-10 hover:scale-110 duration-300 transition" @click="OpenSwiper">Gallery</Button>
+      <Button class="col-start-1 col-end-13 row-start-3 place-self-center text-display-1 devs-white text-center text-custom-Primary-0 -mt-10 mb-10 dev-white hover:scale-110 duration-300 transition" @click="OpenSwiper">Gallery</Button>
 
       <div class="col-start-2 col-end-3 place-self-start text-heading-3 text-custom-Secondary-2 devs-white">
         <div>SUMMER</div>
@@ -256,7 +256,7 @@ export default {
 
       <div ref="L1" class="col-start-9 col-end-10 place-self-end sm:mt-5 sm:place-self-start devs-red text-heading-3 mb-5 text-custom-Secondary-2">SECTION 01</div>
       <GalleryItem ref="L11" class="col-start-4 col-end-10 place-self-end sm:place-self-start w-[41.1875rem]" :img="G11">1997 fhristopher fairbank</GalleryItem>
-      <GalleryItem ref="L12" class="col-start-10 col-end-13 row-start-2 place-self-end sm:place-self-start w-[20.6875rem] sm:w-auto" @click="OpenSwiper(1)" :img="G12">1997 fhristopher fairbank</GalleryItem>
+      <GalleryItem ref="L12" class="col-start-10 col-end-13 row-start-2 place-self-end sm:place-self-start w-[20.6875rem] sm:w-auto" :img="G12">1997 fhristopher fairbank</GalleryItem>
 
       <div ref="L2" class="col-start-9 col-end-10 row-start-5 sm:mt-5 devs-red text-heading-3 place-self-end sm:place-self-start text-custom-Secondary-2 mb-5">SECTION 02</div>
       <GalleryItem ref="L21" class="col-start-1 col-end-5 row-start-4 row-end-[12] w-[27.0625rem] place-self-start" :img="G21">1997 fhristopher fairbank</GalleryItem>

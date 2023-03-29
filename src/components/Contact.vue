@@ -62,10 +62,10 @@ onMounted(() => {
         <div class="w-[16.5rem] h-[16.5rem] backdrop-invert absolute hidden rounded-full" ref="mouse"></div>
       </div>
 
-    <div class="absolute top-[52.5rem] left-[-2.375rem] mb-10 text-display-1 text-custom-Secondary-2 pointer-events-none none sm:top-[41.9rem]">ME</div>
+    <div class="absolute top-[52.5rem] left-[-2.375rem] mb-10 text-display-1 text-custom-Secondary-2 pointer-events-none none sm:top-[43rem]">ME</div>
     <div class="absolute top-[37.1875rem] right-[-6.25rem] text-display-1 text-custom-Secondary-2 pointer-events-none sm:top-[27rem] sm:right-[-2.8rem]">CALL</div>
 
-    <div class="text-center w-[29.625rem] text-body-2 text-custom-Secondary-2 mb-[7.5rem]">
+    <div class="text-center w-[29.625rem] sm:w-[20rem] text-body-2 text-custom-Secondary-2 mb-[7.5rem]">
       Sit elit incididunt Lorem minim ea pariatur anim dolor ut veniam amet ad. Ipsum tempor commodo ullamco Lorem incididunt proident nisi nostrud dolore. Et labore minim laboris esse amet eu eu exercitation ea esse velit tempor culpa.
     </div>
   </div>
