@@ -13,7 +13,7 @@ onMounted(() => {
     {
       width: "100%",
       delay: 0.5,
-      duration: 2,
+      duration: 3,
       onComplete: () => {
         emits("loadEnd");
         document.body.style.overflowY = "scroll";
@@ -26,7 +26,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="h-screen w-screen flex justify-center items-center">
+  <div class="h-screen w-screen flex justify-center items-center bg-black">
     <div class="w-[14%] h-[8%] flex flex-col justify-between items-center">
       <div class="text-heading-2 text-custom-Primary-0 text-[50px]">ZOENW</div>
       <div class="w-full h-0.5 bg-custom-GrayScale-1">
