@@ -15,7 +15,7 @@ onMounted(() => {
 
   const loader = new OBJLoader();
   loader.load(
-    "../../public/models/2023F2E-TEST.obj",
+    " ./models/2023F2E-TEST.obj",
     function (object) {
       console.log("model is onLoad");
       // const model = obj;
