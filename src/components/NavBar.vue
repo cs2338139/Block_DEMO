@@ -1,11 +1,15 @@
 <script setup>
 import { ref } from "vue";
+import gsap from "gsap";
 const aboutButton = ref();
 const storyButton = ref();
 const galleryButton = ref();
 const contactButton = ref();
 const contactIcon = ref();
 const activeButtonName = ref();
+const mButtonDiv = ref();
+const mButton = ref();
+const mButtonState = ref(false);
 
 function Click(target) {
   aboutButton.value.style.color = null;
@@ -33,6 +37,22 @@ function Click(target) {
   }
   activeButtonName.value = target;
 }
+
+function Mbutton() {
+  mButtonState.value = !mButtonState.value;
+
+  if (mButtonState.value) {
+    gsap.to(mButton.value.children[0], { duration: 0.5, attr: { x1: 0, y1: 12.5, stroke: "rgb(243,238,229)" } });
+    gsap.to(mButton.value.children[1], { duration: 0.5, strokeOpacity: 0 });
+    gsap.to(mButton.value.children[2], { duration: 0.5, attr: { x1: 0, y1: 0.5, stroke: "rgb(243,238,229)" } });
+    gsap.to(mButtonDiv.value, { duration: 0.5, backgroundColor: "rgb(40,142,62)" });
+  } else {
+    gsap.to(mButton.value.children[0], { duration: 0.5, attr: { x1: 0, y1: 0.5, stroke: "rgb(0,0,0)" } });
+    gsap.to(mButton.value.children[1], { duration: 0.5, strokeOpacity: 1 });
+    gsap.to(mButton.value.children[2], { duration: 0.5, attr: { x1: 6, y1: 12.5, stroke: "rgb(0,0,0)" } });
+    gsap.to(mButtonDiv.value, { duration: 0.5, backgroundColor: "rgb(243,238,229)" });
+  }
+}
 </script>
 
 <template>
@@ -57,13 +77,13 @@ function Click(target) {
         <div class="group-hover:text-custom-Primary-1 transition duration-300">Contact</div>
       </button>
     </div>
-    <div class="w-[3rem] h-[2.625rem] bg-custom-Secondary-2 rounded-full p-[1rem] hidden sm:flex">
-      <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line y1="0.5" x2="16" y2="0.5" stroke="black" />
-        <line y1="6.5" x2="16" y2="6.5" stroke="black" />
+    <button ref="mButtonDiv" class="w-[3rem] h-[2.625rem] bg-custom-Secondary-2 rounded-full p-[1rem] hidden sm:flex" @click="Mbutton">
+      <svg ref="mButton" width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0.5" x2="16" y2="0.5" stroke="black" />
+        <line x1="0" y1="6.5" x2="16" y2="6.5" stroke="black" />
         <line x1="6" y1="12.5" x2="16" y2="12.5" stroke="black" />
       </svg>
-    </div>
+    </button>
   </div>
 </template>
 

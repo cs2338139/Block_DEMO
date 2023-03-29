@@ -27,7 +27,7 @@ function OpenSwiper() {
 
   // console.log(_galleryImages.value);
 
-  swiper.value.$el.style.display = "block";
+  swiper.value.$el.style.display = "flex";
   document.body.style.overflow = "hidden";
 }
 </script>
