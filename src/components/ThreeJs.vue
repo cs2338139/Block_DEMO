@@ -4,7 +4,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { ref, onMounted } from "vue";
-import model from "../../public/models/2023F2E-TEST.obj";
+// import model from "../../public/models/2023F2E-TEST.obj?url";
 // import model from "../../public/models/2023F2E-TEST.obj";
 // import G41 from "../../public/Image/Gallery/G-4-1.jpeg";
 // const model = new URL('../../public/models/2023F2E-TEST.obj', import.meta.url).href
@@ -19,7 +19,7 @@ onMounted(() => {
   // ./web/source/laptop.glb
   const loader = new OBJLoader();
   loader.load(
-    model,
+    './models/2023F2E-TEST.obj',
     // ' ./web/source/laptop.glb',
     function (object) {
       console.log("model is onLoad");
@@ -28,7 +28,7 @@ onMounted(() => {
       object.traverse((child) => {
         if (child.material) child.material = new THREE.MeshToonMaterial({ color: 0x288e3e });
       });
-      object.position.set(0, 7, -7);
+      object.position.set(0, 0, 0);
       object.scale.set(3, 3, 3);
       object.castShadow = true;
       scene.add(object);
