@@ -22,18 +22,18 @@ onMounted(() => {
   const loader = new GLTFLoader();
   loader.load(
     // './models/2023F2E-TEST.obj',
-    './models/laptop.glb',
+    ' ./web/source/laptop.glb',
     function (object) {
       console.log("model is onLoad");
       // const model = obj;
-
-      object.traverse((child) => {
+      const model = object.scene;
+      model.traverse((child) => {
         if (child.material) child.material = new THREE.MeshToonMaterial({ color: 0x288e3e });
       });
-      object.position.set(0, 0, 0);
-      object.scale.set(3, 3, 3);
-      object.castShadow = true;
-      scene.add(object);
+      model.position.set(0, 0, 0);
+      model.scale.set(3, 3, 3);
+      model.castShadow = true;
+      scene.add(model);
     },
     undefined,
     function (error) {
