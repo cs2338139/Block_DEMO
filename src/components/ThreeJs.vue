@@ -15,15 +15,15 @@ const container = ref();
 onMounted(() => {
   const camera = new THREE.PerspectiveCamera(75, 2, 0.1, 1000);
   camera.position.x = 30;
-  camera.position.y = 20;
+  camera.position.y = 30;
   camera.position.z = 30;
   // ./web/source/laptop.glb
-  const loader = new OBJLoader();
-  // const loader = new GLTFLoader();
+  // const loader = new OBJLoader();
+  const loader = new GLTFLoader();
   loader.load(
     // './models/2023F2E-TEST.obj',
     // ' ./web/source/2023F2E-TEST.obj',
-    ' ./web/source/laptop.glb',
+    ' ./web/source/35mm_film_roll.glb',
     function (object) {
       console.log("model is onLoad");
       // const model = obj;
@@ -31,8 +31,8 @@ onMounted(() => {
       // model.traverse((child) => {
       //   if (child.material) child.material = new THREE.MeshToonMaterial({ color: 0x288e3e });
       // });
-      model.position.set(0, 0, 0);
-      model.scale.set(3, 3, 3);
+      model.position.set(0, -10, 0);
+      model.scale.set(100, 100, 100);
       model.castShadow = true;
       scene.add(model);
     },
@@ -111,7 +111,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="dev-red">
+  <div class="">
     <div id="threejs-container" ref="container" class="" />
   </div>
 </template>
