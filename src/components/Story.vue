@@ -36,7 +36,7 @@ onMounted(() => {
         scrollTrigger: {
           trigger: main.value,
           start: "center 20%",
-          markers: true,
+          // markers: true,
         },
       }
     );
