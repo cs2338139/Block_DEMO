@@ -28,9 +28,9 @@ onMounted(() => {
       console.log("model is onLoad");
       // const model = obj;
       const model = object.scene;
-      model.traverse((child) => {
-        if (child.material) child.material = new THREE.MeshToonMaterial({ color: 0x288e3e });
-      });
+      // model.traverse((child) => {
+      //   if (child.material) child.material = new THREE.MeshToonMaterial({ color: 0x288e3e });
+      // });
       model.position.set(0, 0, 0);
       model.scale.set(3, 3, 3);
       model.castShadow = true;
