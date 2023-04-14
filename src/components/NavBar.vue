@@ -11,31 +11,35 @@ const mButtonDiv = ref();
 const mButton = ref();
 const mButtonState = ref(false);
 
-function Click(target) {
-  aboutButton.value.style.color = null;
-  storyButton.value.style.color = null;
-  galleryButton.value.style.color = null;
-  contactButton.value.style.color = null;
-  contactIcon.value.style.fill = null;
+const emits = defineEmits(['scrollTo']);
 
-  if (target != activeButtonName.value) {
-    switch (target) {
-      case "about":
-        aboutButton.value.style.color = "rgb(40, 142, 62)";
-        break;
-      case "story":
-        storyButton.value.style.color = "rgb(40, 142, 62)";
-        break;
-      case "gallery":
-        galleryButton.value.style.color = "rgb(40, 142, 62)";
-        break;
-      case "contact":
-        contactButton.value.style.color = "rgb(40, 142, 62)";
-        contactIcon.value.style.fill = "#288E3E";
-        break;
-    }
-  }
-  activeButtonName.value = target;
+function Click(target) {
+  // aboutButton.value.style.color = null;
+  // storyButton.value.style.color = null;
+  // galleryButton.value.style.color = null;
+  // contactButton.value.style.color = null;
+  // contactIcon.value.style.fill = null;
+
+  // if (target != activeButtonName.value) {
+  // switch (target) {
+  //   case "about":
+  //     // aboutButton.value.style.color = "rgb(40, 142, 62)";
+  //     emits('scroll',target);
+  //     break;
+  //   case "story":
+  //     storyButton.value.style.color = "rgb(40, 142, 62)";
+  //     break;
+  //   case "gallery":
+  //     galleryButton.value.style.color = "rgb(40, 142, 62)";
+  //     break;
+  //   case "contact":
+  //     contactButton.value.style.color = "rgb(40, 142, 62)";
+  //     contactIcon.value.style.fill = "#288E3E";
+  //     break;
+  // }
+  // }
+  // activeButtonName.value = target;
+  emits("scrollTo", target);
 }
 
 function Mbutton() {
@@ -57,8 +61,8 @@ function Mbutton() {
 
 <template>
   <div class="w-full h-24 sm:h-20 flex justify-between items-center pt-8 sm:py-8 pr-20 pl-10 sm:px-7">
-    <a href="https://en.wikipedia.org/wiki/Nonlinear_narrative" target="_blank" class="text-heading-2 sm:text-[1.5rem] text-custom-Secondary-2 transition duration-300 hover:text-custom-Primary-1">ZOENW</a>
-    <div class="w-1/3 bg-custom-Secondary-2 h-14 rounded-full flex text-minium justify-between items-center gap-6 px-14 sm:hidden">
+    <a href="/" target="_blank" class="text-heading-2 sm:text-[1.5rem] text-custom-Secondary-2 transition duration-300 hover:text-custom-Primary-1">VIBE 400</a>
+    <div class="w-2/5 bg-custom-Secondary-2 h-14 rounded-full flex text-minium justify-between items-center gap-6 px-14 sm:hidden">
       <div class="flex justify-between grow">
         <button ref="aboutButton" @click="Click('about')" class="hover:text-custom-Primary-1 transition duration-300">About</button>
         <button ref="storyButton" @click="Click('story')" class="hover:text-custom-Primary-1 transition duration-300">Story</button>
@@ -73,7 +77,6 @@ function Mbutton() {
           />
         </svg>
 
-        <!-- <img src="/src/assets/UI/phone.svg" alt="" class="w-[22px]" /> -->
         <div class="group-hover:text-custom-Primary-1 transition duration-300">Contact</div>
       </button>
     </div>

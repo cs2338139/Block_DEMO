@@ -28,7 +28,7 @@ onMounted(() => {
 <template>
   <div class="h-screen w-screen flex justify-center items-center bg-black">
     <div class="w-[14%] h-[8%] flex flex-col  sm:w-[60%] sm:h-[12%] justify-between  items-center">
-      <div class="text-heading-2 text-custom-Primary-0 text-[50px]">ZOENW</div>
+      <div class="text-heading-2 text-custom-Primary-0 text-[50px]">VIBE 400</div>
       <div class="w-full h-0.5 bg-custom-GrayScale-1">
         <div class="w-0 h-0.5 bg-custom-Primary-0" ref="loadingContent"></div>
       </div>

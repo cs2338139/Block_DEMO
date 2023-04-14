@@ -55,31 +55,31 @@ onMounted(() => {
   <div class="h-[21.625rem] sm:h-[11.5rem] w-full flex flex-col justify-around bg-custom-Secondary-2 text-display-2 text-custom-Secondary-1">
     <div class="min-w-fit whitespace-nowrap h-full flex items-center relative" ref="bar1">
       <div>
-        <span>PURE</span>
+        <span>VIBE-400</span>
         <span class="mx-10">/</span>
         <span>ORGANIC</span>
         <span class="mx-10">/</span>
-        <span>TRUE ROMANCE</span>
+        <span>Film</span>
         <span class="mx-10">/</span>
-        <span>PURE</span>
+        <span>PURESSE</span>
         <span class="mx-10">/</span>
         <span>ORGANIC</span>
         <span class="mx-10">/</span>
-        <span>TRUE ROMANCE</span>
+        <span>TRUE --ROMANCE</span>
         <span class="mx-10">/</span>
       </div>
       <div>
-        <span>PURE</span>
+        <span>VIBE-400</span>
         <span class="mx-10">/</span>
         <span>ORGANIC</span>
         <span class="mx-10">/</span>
-        <span>TRUE ROMANCE</span>
+        <span>Film</span>
         <span class="mx-10">/</span>
-        <span>PURE</span>
+        <span>PURESSE</span>
         <span class="mx-10">/</span>
         <span>ORGANIC</span>
         <span class="mx-10">/</span>
-        <span>TRUE ROMANCE</span>
+        <span>TRUE --ROMANCE</span>
         <span class="mx-10">/</span>
       </div>
     </div>
@@ -87,31 +87,31 @@ onMounted(() => {
 
     <div class="min-w-fit whitespace-nowrap h-full flex items-center relative" ref="bar2">
       <div>
-        <span>ORGANIC</span>
+        <span>ORGA-NIC</span>
         <span class="mx-10">/</span>
         <span>PURE</span>
         <span class="mx-10">/</span>
-        <span>ORGANIC</span>
+        <span>O RGANIC</span>
         <span class="mx-10">/</span>
         <span>ORGANIC</span>
         <span class="mx-10">/</span>
-        <span>PURE</span>
+        <span>PUR E</span>
         <span class="mx-10">/</span>
-        <span>ORGANIC</span>
+        <span>JINCHENG</span>
         <span class="mx-10">/</span>
       </div>
       <div>
-        <span>ORGANIC</span>
+        <span>ORGA-NIC</span>
         <span class="mx-10">/</span>
         <span>PURE</span>
         <span class="mx-10">/</span>
-        <span>ORGANIC</span>
+        <span>O RGANIC</span>
         <span class="mx-10">/</span>
         <span>ORGANIC</span>
         <span class="mx-10">/</span>
-        <span>PURE</span>
+        <span>PUR E</span>
         <span class="mx-10">/</span>
-        <span>ORGANIC</span>
+        <span>JINCHENG</span>
         <span class="mx-10">/</span>
       </div>
     </div>

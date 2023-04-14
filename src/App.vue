@@ -10,7 +10,7 @@ import { register } from "swiper/element/bundle";
 
 register();
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, EaselPlugin);
+gsap.registerPlugin(ScrollTrigger,ScrollToPlugin, EaselPlugin);
 
 const isLoaded = ref(false);
 function IsLoaded() {

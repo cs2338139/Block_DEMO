@@ -1,5 +1,5 @@
 <script setup>
-// import contact from "../../public/Image/Contact.png";
+// import contact from "../../public/Image/Contact.jpeg";
 import { ref, onMounted } from "vue";
 import gsap from "gsap";
 
@@ -53,7 +53,7 @@ onMounted(() => {
   <div class="devs-yellow w-full relative flex flex-col items-center">
     <div class="devs-red ml-16 text-display-1 text-custom-Secondary-2 sm:-ml-10" ref="contact">Contact</div>
 
-    <div class="text-center text-heading-2 text-custom-Primary-0 devs-red whitespace-nowrap my-14">+339 566 789</div>
+    <div class="text-center text-heading-2 text-custom-Primary-0 devs-red whitespace-nowrap my-14">0975 601 925</div>
 
     <!-- <div class="backdrop-hue-rotate-90 bg-white/30">
       <img :src="contact" class="min-w-[82.875rem] sm:max-h-[276px] sm:min-w-fit sm:mr-28 mb-10" />
@@ -66,7 +66,9 @@ onMounted(() => {
     <div class="absolute top-[37.1875rem] right-[-6.25rem] text-display-1 text-custom-Secondary-2 pointer-events-none sm:top-[27rem] sm:right-[-2.8rem]">CALL</div>
 
     <div class="text-center w-[29.625rem] sm:w-[20rem] text-body-2 text-custom-Secondary-2 mb-[7.5rem]">
-      Sit elit incididunt Lorem minim ea pariatur anim dolor ut veniam amet ad. Ipsum tempor commodo ullamco Lorem incididunt proident nisi nostrud dolore. Et labore minim laboris esse amet eu eu exercitation ea esse velit tempor culpa.
+      VIBE Photo 400 is a color negative film. The film is sold under the “VIBE Photo” brand. However, the film is manufactured by a different company. Japan is indicated as the country of manufacture. This naturally points to Fujifilm as the producer.
+
+The VIBE 400 is designed for color images. The manufacturer specifies the sensitivity with ISO 400. Due to this sensitivity, the film is versatile and therefore makes a good figure in everyday life.
     </div>
   </div>
 </template>

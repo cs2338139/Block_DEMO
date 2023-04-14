@@ -4,8 +4,8 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { ref, onMounted } from "vue";
-// import model from "../../public/models/2023F2E-TEST.obj?url";
-const model = new URL('../../models/2023F2E-TEST.obj', import.meta.url).href
+import model from "../../public/models/2023F2E-TEST.obj?url";
+// const model = new URL('../../models/2023F2E-TEST.obj', import.meta.url).href
 
 const container = ref();
 
@@ -23,10 +23,10 @@ onMounted(() => {
       // const model = obj;
 
       object.traverse((child) => {
-        if (child.material) child.material = new THREE.MeshToonMaterial({ color: 0x288E3E } );
+        if (child.material) child.material = new THREE.MeshToonMaterial({ color: 0x288e3e });
       });
-      object.position.set(0, -10, 0);
-      object.scale.set(150, 150, 150);
+      object.position.set(0, 7, -7);
+      object.scale.set(3, 3, 3);
       object.castShadow = true;
       scene.add(object);
     },

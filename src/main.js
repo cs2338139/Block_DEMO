@@ -11,7 +11,7 @@ import { DefaultApolloClient } from "@vue/apollo-composable";
 // HTTP connection to the API
 const httpLink = createHttpLink({
   // You should use an absolute URL here
-  uri: "https://wp.nmtl-ws.com/graphql",
+  uri: "https://chanyuanan.com/wordpress/graphql",
 });
 
 // Cache implementation
