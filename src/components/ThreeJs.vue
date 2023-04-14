@@ -4,8 +4,9 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { ref, onMounted } from "vue";
-// import model from "../../public/models/2023F2E-TEST.obj?url";
-import model from "../../public/models/2023F2E-TEST.obj?url";
+import model from "../../public/models/2023F2E-TEST.obj";
+// import model from "../../public/models/2023F2E-TEST.obj";
+// import G41 from "../../public/Image/Gallery/G-4-1.jpeg";
 // const model = new URL('../../public/models/2023F2E-TEST.obj', import.meta.url).href
 
 const container = ref();
