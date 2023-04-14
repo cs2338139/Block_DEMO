@@ -18,10 +18,11 @@ onMounted(() => {
   camera.position.y = 20;
   camera.position.z = 30;
   // ./web/source/laptop.glb
-  // const loader = new OBJLoader();
-  const loader = new GLTFLoader();
+  const loader = new OBJLoader();
+  // const loader = new GLTFLoader();
   loader.load(
     // './models/2023F2E-TEST.obj',
+    // ' ./web/source/2023F2E-TEST.obj',
     ' ./web/source/laptop.glb',
     function (object) {
       console.log("model is onLoad");
