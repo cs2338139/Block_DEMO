@@ -73,9 +73,9 @@ onMounted(() => {
 
     <div class="absolute top-0 left-7 w-[19.5rem] text-display-0 text-custom-Primary-0 z-10 hidden sm:block">VIBE -400 2023</div>
 
-    <div ref="movie" class="absolute top-[40rem] sm:top-[27.4rem] -right-28 sm:right-6 text-display-0 text-custom-Primary-0 z-10">Film</div>
+    <div ref="movie" class="absolute top-[40rem] sm:top-[27.4rem] -right-28 sm:-right-12 text-display-0 text-custom-Primary-0 z-10">Film</div>
 
-    <div ref="buttonRect" class="flex flex-col gap-10 sm:gap-8 top-[43.25rem] sm:top-[32.25rem] left-20 w-[29.625rem] sm:w-[19.5rem] sm:center absolute">
+    <div ref="buttonRect" class="flex flex-col gap-10 sm:gap-8 top-[43.25rem] sm:top-[12.5rem] left-20 w-[29.625rem] sm:w-[19.5rem] sm:center absolute">
       <div class="text-body-2 text-custom-Secondary-2">
         VIBE Photo 400 is a color negative film. The film is sold under the “VIBE Photo” brand. However, the film is manufactured by a different company. Japan is indicated as the country of manufacture. This naturally points to Fujifilm as the producer.
       </div>

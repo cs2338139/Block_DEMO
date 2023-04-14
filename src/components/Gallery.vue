@@ -41,7 +41,7 @@ onMounted(() => {
       y: 0,
       scrollTrigger: {
         trigger: L1.value,
-        start: "center 700",
+        start: "center 60%",
         end: "+=500",
         scrub: 1,
         // markers: true,
@@ -55,7 +55,7 @@ onMounted(() => {
       y: 0,
       scrollTrigger: {
         trigger: L1.value,
-        start: "center 700",
+        start: "center 60%",
         end: "+=800",
         scrub: 1,
         // markers: true,
@@ -69,7 +69,7 @@ onMounted(() => {
       y: 0,
       scrollTrigger: {
         trigger: L2.value,
-        start: "center 700",
+        start: "center 60%",
         end: "+=400",
         scrub: 1,
         // markers: true,
@@ -83,7 +83,7 @@ onMounted(() => {
       y: 0,
       scrollTrigger: {
         trigger: L2.value,
-        start: "center 700",
+        start: "center 60%",
         end: "+=600",
         scrub: 1,
         // markers: true,
@@ -97,7 +97,7 @@ onMounted(() => {
       y: 0,
       scrollTrigger: {
         trigger: L2.value,
-        start: "center 700",
+        start: "center 60%",
         end: "+=800",
         scrub: 1,
         // markers: true,
@@ -111,7 +111,7 @@ onMounted(() => {
       y: 0,
       scrollTrigger: {
         trigger: L3.value,
-        start: "center 700",
+        start: "center 60%",
         end: "+=800",
         scrub: 1,
         // markers: true,
@@ -125,7 +125,7 @@ onMounted(() => {
       y: 0,
       scrollTrigger: {
         trigger: L3.value,
-        start: "center 700",
+        start: "center 60%",
         end: "+=700",
         scrub: 1,
         // markers: true,
@@ -139,7 +139,7 @@ onMounted(() => {
       y: 0,
       scrollTrigger: {
         trigger: L4.value,
-        start: "center 700",
+        start: "center 60%",
         end: "+=500",
         scrub: 1,
         // markers: true,

@@ -31,8 +31,8 @@ onMounted(() => {
       // model.traverse((child) => {
       //   if (child.material) child.material = new THREE.MeshToonMaterial({ color: 0x288e3e });
       // });
-      model.position.set(0, -10, 0);
-      model.scale.set(100, 100, 100);
+      model.position.set(0, 15, 0);
+      model.scale.set(50, 50, 50);
       model.castShadow = true;
       scene.add(model);
     },
@@ -47,7 +47,7 @@ onMounted(() => {
   renderer.setPixelRatio(window.devicePixelRatio);
 
   renderer.outputEncoding = THREE.sRGBEncoding;
-  renderer.setSize(450, 450 / 2); // size
+  // renderer.setSize(450, 450 / 2); // size
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   container.value.appendChild(renderer.domElement);
@@ -101,7 +101,7 @@ onMounted(() => {
     // const height = window.innerHeight / 2;
     // camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(800, 400);
+    renderer.setSize(1600, 800);
 
     controls.update();
     renderer.render(scene, camera);

@@ -39,7 +39,7 @@ onMounted(() => {
       opacity: 1,
       scrollTrigger: {
         trigger: target.value,
-        start: "top 700",
+        start: "top 60%",
         end: "+=800",
         scrub: 1,
         // markers: true,

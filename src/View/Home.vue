@@ -28,6 +28,7 @@ onMounted(() => {
     if (popupEnable.value) {
       document.body.style.overflowY = "hidden";
       refPopup.value.$el.style.display = "flex";
+      refPopup.value.popupMoveUp();
       console.log(document.body.style.overflowY);
     } else {
       document.body.style.overflowY = "scroll";
@@ -39,16 +40,16 @@ onMounted(() => {
 function ScrollTo(value) {
   let target = "";
   switch (value) {
-    case 'about':
+    case "about":
       target = "#about";
       break;
-    case 'story':
+    case "story":
       target = "#story";
       break;
-    case 'gallery':
+    case "gallery":
       target = "#gallery";
       break;
-    case 'contact':
+    case "contact":
       target = "#contact";
       break;
   }

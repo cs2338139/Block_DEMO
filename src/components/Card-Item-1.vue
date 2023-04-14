@@ -16,7 +16,7 @@ onMounted(() => {
       y: 0,
       scrollTrigger: {
         trigger: hand.value,
-        start: "top 700",
+        start: "top 60%",
         end: "+=500",
         scrub: 1,
         // markers: true,
