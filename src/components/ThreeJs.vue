@@ -4,8 +4,9 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { ref, onMounted } from "vue";
-import model from "../../public/models/2023F2E-TEST.obj?url";
-// const model = new URL('../../models/2023F2E-TEST.obj', import.meta.url).href
+// import model from "../../public/models/2023F2E-TEST.obj?url";
+// import model from "../../public/models/2023F2E-TEST.obj?url";
+const model = new URL('../../public/models/2023F2E-TEST.obj', import.meta.url).href
 
 const container = ref();
 
@@ -14,10 +15,11 @@ onMounted(() => {
   camera.position.x = 30;
   camera.position.y = 20;
   camera.position.z = 30;
-
+  // ./web/source/laptop.glb
   const loader = new OBJLoader();
   loader.load(
-    model,
+    ' ./models/2023F2E-TEST.obj',
+    // ' ./web/source/laptop.glb',
     function (object) {
       console.log("model is onLoad");
       // const model = obj;
