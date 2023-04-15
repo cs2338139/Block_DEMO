@@ -129,6 +129,7 @@ onMounted(() => {
     { y: 500, opacity: 0 },
     {
       y: 0,
+      opacity: 1,
       scrollTrigger: {
         trigger: L3.value,
         start: "center 60%",
