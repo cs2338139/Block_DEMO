@@ -29,16 +29,17 @@ const L4 = ref();
 const L41 = ref();
 
 // const G31= ref();
-const T31= ref();
+const T31 = ref();
 // const G32= ref();
-const T32= ref();
+const T32 = ref();
 
 onMounted(() => {
   gsap.fromTo(
     L11.value.$el,
-    { y: 500 },
+    { y: 500, opacity: 0 },
     {
       y: 0,
+      opacity: 1,
       scrollTrigger: {
         trigger: L1.value,
         start: "center 60%",
@@ -50,9 +51,10 @@ onMounted(() => {
   );
   gsap.fromTo(
     L12.value.$el,
-    { y: 800 },
+    { y: 800, opacity: 0 },
     {
       y: 0,
+      opacity: 1,
       scrollTrigger: {
         trigger: L1.value,
         start: "center 60%",
@@ -64,9 +66,10 @@ onMounted(() => {
   );
   gsap.fromTo(
     L21.value.$el,
-    { y: 600 },
+    { y: 600, opacity: 0 },
     {
       y: 0,
+      opacity: 1,
       scrollTrigger: {
         trigger: L2.value,
         start: "center 60%",
@@ -78,9 +81,10 @@ onMounted(() => {
   );
   gsap.fromTo(
     L22.value.$el,
-    { y: 700 },
+    { y: 700, opacity: 0 },
     {
       y: 0,
+      opacity: 1,
       scrollTrigger: {
         trigger: L2.value,
         start: "center 60%",
@@ -92,9 +96,10 @@ onMounted(() => {
   );
   gsap.fromTo(
     L23.value.$el,
-    { y: 800 },
+    { y: 800, opacity: 0 },
     {
       y: 0,
+      opacity: 1,
       scrollTrigger: {
         trigger: L2.value,
         start: "center 60%",
@@ -106,9 +111,10 @@ onMounted(() => {
   );
   gsap.fromTo(
     L31.value.$el,
-    { y: 800 },
+    { y: 800, opacity: 0 },
     {
       y: 0,
+      opacity: 1,
       scrollTrigger: {
         trigger: L3.value,
         start: "center 60%",
@@ -120,7 +126,7 @@ onMounted(() => {
   );
   gsap.fromTo(
     L32.value.$el,
-    { y: 500 },
+    { y: 500, opacity: 0 },
     {
       y: 0,
       scrollTrigger: {
@@ -134,9 +140,10 @@ onMounted(() => {
   );
   gsap.fromTo(
     L41.value.$el,
-    { y: 500 },
+    { y: 500, opacity: 0 },
     {
       y: 0,
+      opacity: 1,
       scrollTrigger: {
         trigger: L4.value,
         start: "center 60%",

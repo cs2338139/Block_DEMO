@@ -18,7 +18,7 @@ function Click() {
 
 <template>
   <div class="flex justify-start items-end grow">
-    <button class="bg-custom-Secondary-2 w-[8.1875rem] h-[2.5rem] rounded-full text-custom-Primary-1 hover:text-custom-Secondary-2 hover:bg-custom-Primary-1 transition duration-300" @click="Click()" ref="button">LEARN MORE</button>
+    <button class="bg-custom-Secondary-2 w-[8.1875rem] h-[2.5rem] rounded-full text-custom-Primary-1 hover:text-custom-Secondary-2 hover:w-[20rem] hover:bg-custom-Primary-1 transition-all duration-300" @click="Click()" ref="button">LEARN MORE</button>
   </div>
 </template>
 

@@ -18,6 +18,7 @@ const about = ref(false);
 const story = ref(false);
 const gallery = ref(false);
 const contact = ref(false);
+const navBar = ref(false);
 
 onMounted(() => {
   setTimeout(() => {
@@ -36,6 +37,11 @@ onMounted(() => {
     }
   });
 });
+
+function Start() {
+navBar.value.Start();
+about.value.Start();
+}
 
 function ScrollTo(value) {
   let target = "";
@@ -58,14 +64,16 @@ function ScrollTo(value) {
 
   console.log(value);
 }
+
+defineExpose({ Start });
 </script>
 
 <template>
   <div>
-    <NavBar @scrollTo="ScrollTo" class="fixed z-40" />
+    <NavBar ref="navBar" @scrollTo="ScrollTo" class="fixed z-40" />
     <popup @popupClose="popupEnable = false" ref="refPopup" class="fixed z-50 hidden" />
     <div class="min-h-screen pt-32 sm:pt-20 overflow-hidden">
-      <KV id="about" @popupOpen="popupEnable = true"></KV>
+      <KV id="about" ref="about" @popupOpen="popupEnable = true"></KV>
       <Story id="story" class="-z-10"></Story>
       <Card></Card>
       <Banner></Banner>

@@ -8,20 +8,12 @@ const button = ref();
 const buttonIcon = ref();
 const buttonRect = ref();
 const movie = ref();
+const title_1 = ref();
+const title_2 = ref();
 
 const emits = defineEmits(["popupOpen"]);
 
 function Click() {
-  // buttonState.value = !buttonState.value;
-
-  // if (buttonState.value) {
-  //   buttonIcon.value.style.backgroundColor = "rgb(40, 142, 62)";
-  //   // button.value.style.opacity = "1";
-  // } else {
-  //   buttonIcon.value.style.backgroundColor = null;
-  //   // buttonIcon.value.style.backgroundColor = "rgb(0, 0, 0)";
-  //   // button.value.style.opacity = "0.3";
-  // }
   emits("popupOpen");
 }
 
@@ -43,33 +35,38 @@ onMounted(() => {
 
   // console.log(movie.value);
 
-  gsap.fromTo(
-    buttonRect.value,
-    { y: 100 },
-    {
-      y: 0,
-      scrollTrigger: {
-        trigger: buttonRect.value,
-        start: "top bottom",
-        end: "bottom center",
-        scrub: true,
-        // markers: true,
-      },
-    }
-  );
+  // gsap.fromTo(
+  //   buttonRect.value,
+  //   { y: 100 },
+  //   {
+  //     y: 0,
+  //     scrollTrigger: {
+  //       trigger: buttonRect.value,
+  //       start: "top bottom",
+  //       end: "bottom center",
+  //       scrub: true,
+  //       // markers: true,
+  //     },
+  //   }
+  // );
 });
+
+function Start() {
+  gsap.fromTo(title_1.value, { y: "100%", opacity: 0 }, { opacity: 1, y: 0, duration: 0.6 });
+  gsap.fromTo(title_2.value, { y: "100%", opacity: 0 }, { opacity: 1, y: 0, duration: 1 });
+  console.log("222");
+}
+
+defineExpose({ Start });
 </script>
 
 <template>
   <div class="devss-yellow h-[64.3125rem] sm:h-[45.9375rem] w-full relative bg-custom-GrayScale-0 z-30">
     <img :src="KV1" class="absolute top-[8.5rem] center ml-4 min-w-[46.625rem] z-0" />
-    <!-- <img :src="mKV1" class="absolute top-[6.8rem] left-0 z-0 hidden sm:block" /> -->
-
     <img :src="KV2" class="absolute top-[0rem] center ml-100 min-w-[31.4375rem] -z-20" />
-    <!-- <img :src="mKV2" class="absolute top-[0rem] right-0 -z-20 hidden sm:block" /> -->
 
-    <div class="absolute top-0 -left-10 w-[99.625rem] text-display-0 text-custom-Primary-0 -z-10 sm:hidden">VIBE -400</div>
-    <div class="absolute top-[17rem] -left-10 text-display-0 text-custom-Primary-0 z-0 sm:hidden">2023</div>
+    <div ref="title_1" class="absolute top-0 -left-10 w-[99.625rem] text-display-0 text-custom-Primary-0 -z-10 sm:hidden">VIBE -400</div>
+    <div ref="title_2" class="absolute top-[17rem] -left-10 text-display-0 text-custom-Primary-0 z-0 sm:hidden">2023</div>
 
     <div class="absolute top-0 left-7 w-[19.5rem] text-display-0 text-custom-Primary-0 z-10 hidden sm:block">VIBE -400 2023</div>
 
