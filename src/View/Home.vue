@@ -15,9 +15,9 @@ import gsap from "gsap";
 const popupEnable = ref(false);
 const refPopup = ref(false);
 const about = ref(false);
-const story = ref(false);
-const gallery = ref(false);
-const contact = ref(false);
+// const story = ref(false);
+// const gallery = ref(false);
+// const contact = ref(false);
 const navBar = ref(false);
 
 onMounted(() => {
