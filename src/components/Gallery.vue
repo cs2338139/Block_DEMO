@@ -10,10 +10,10 @@ import G12 from "../../public/Image/Gallery/G-1-2.png";
 import G21 from "../../public/Image/Gallery/G-2-1.png";
 import G22 from "../../public/Image/Gallery/G-2-2.png";
 import G23 from "../../public/Image/Gallery/G-2-3.png";
-// import G31 from "../../public/Image/Gallery/G-3-1.png";
-// import G32 from "../../public/Image/Gallery/G-3-2.png";
+import G31 from "../../public/Image/Gallery/G-3-1.png";
+import G32 from "../../public/Image/Gallery/G-3-2.png";
 import G41 from "../../public/Image/Gallery/G-4-1.png";
-import gql from "graphql-tag";
+// import gql from "graphql-tag";
 
 const L1 = ref();
 const L11 = ref();
@@ -28,9 +28,9 @@ const L32 = ref();
 const L4 = ref();
 const L41 = ref();
 
-const G31= ref();
+// const G31= ref();
 const T31= ref();
-const G32= ref();
+// const G32= ref();
 const T32= ref();
 
 onMounted(() => {
@@ -148,46 +148,33 @@ onMounted(() => {
   );
 });
 
-const query = gql`
-  query {
-    posts {
-      nodes {
-        literati {
-          enName
-          image {
-            sourceUrl
-          }
-        }
-      }
-    }
-  }
-`;
+// const query = gql`
+//   query {
+//     posts {
+//       nodes {
+//         literati {
+//           enName
+//           image {
+//             sourceUrl
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
-// const data = ref([]);
-const { result } = useQuery(query);
-watchEffect(() => {
-  // console.log(result.value);
-  // if (result.value.children.length > 0) {
-  //   console.log("get data from wordpress.");
-  //   data.push(result.value.children[0]);
-  //   data.push(result.value.children[1]);
-  //   console.log(data.value);
-  // }
-  if (result.value != undefined) {
-    const { posts: li } = result.value;
-    // console.log(data.nodes[0].literati.enName);
-    console.log("get data from wordpress.");
-    // data.value.push(li.nodes[0].literati.enName);
-    // data.value.push(li.nodes[0].literati.image.sourceUrl);
-    // data.value.push(li.nodes[1].literati.enName);
-    // data.value.push(li.nodes[1].literati.image.sourceUrl);
-    // console.log(data.value);
-    G31.value=li.nodes[0].literati.image.sourceUrl;
-    T31.value=li.nodes[0].literati.enName;
-    G32.value=li.nodes[1].literati.image.sourceUrl;
-    T32.value=li.nodes[1].literati.enName;
-  }
-});
+// const { result } = useQuery(query);
+// watchEffect(() => {
+
+//   if (result.value != undefined) {
+//     const { posts: li } = result.value;
+//     console.log("get data from wordpress.");
+//     G31.value=li.nodes[0].literati.image.sourceUrl;
+//     T31.value=li.nodes[0].literati.enName;
+//     G32.value=li.nodes[1].literati.image.sourceUrl;
+//     T32.value=li.nodes[1].literati.enName;
+//   }
+// });
 
 const galleryImgs = ref([G11, G12, G21, G22, G23, G31, G32, G41]);
 // const _galleryImages = ref([]);
